@@ -1,14 +1,80 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-  <title>SampleApp</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+ <head>
+ <style>
+ B {
+  font-face:"Arial Black";
+  font-size:30px;
+  font-variant:small-caps;
+  text-align:center;
+  color:rgba(12,30,45,.8);
+  white-space:pre;
+  }
+  
+</style>
+<title>Ruby on Rails Tutorial Sample App | <%=@title%> </title>
+<%=csrf_meta_tag%>
 </head>
 <body>
 
-<%= yield %>
+<div style="
+ position:absolute;
+ top:40px;
+ left:40px;
+ width:200px;
+ height:200px;
+ z-index:1;
+ background-color:rgba(111,235,125,.33);
+ border:inset 5px rgba(140,235,125,.5);
+ "> </div>
+ 
+<div style="
+ position:absolute;
+ top:80px;
+ left:80px;
+ width:120px;
+ height:120px;
+ background-color:rgba(255,146,156,.6);
+ border: inset 4px rgba(245,140,160,.7);
+ z-index:2;
+ "> 
+ </div>
+<div style ="
+ position:absolute;
+ top:120px;
+ left:120px;
+ width:40px;
+ height:40px;
+ background-color:rgba(140, 135, 245,.9);
+ border:inset 3px rgba(130,145,255,.95);
+ z-index:3;
+ "></div>
+ 
+<!-- NumeroDos -->
 
-</body>
-</html>
+ <div style="
+ position:absolute;
+ top:247px;
+ left:247px;
+ height:68%;
+ width:67%;
+ background-color:rgba(255,246,210,.8);
+ border:ridge 3px rgba(245,255,210,.85);
+ margin-right:15%;
+ margin-bottom:20%;
+ ">
+ <div style="
+  margin-top:10%;
+  margin-right:10%;
+  margin-bottom:10%;
+  margin-left:10%;
+  "
+  >
+ <%=yield%>
+ </div>
+ </div>
+ </body>
+ </html>
+ 
+ 
